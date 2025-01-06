@@ -1,4 +1,3 @@
-def greet(name):
-    return f"Hello, {name}!"
+from func import greet
 
 print(greet('world'))
