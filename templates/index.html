@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="search">
+        <form action="/" method="post">
+            <input type="text" name="search" placeholder="Hledat...">
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+
+    {% if data %}
+    <div class="data">
+        <ul>
+            {% for item in data %}
+            <li>{{ item.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+</body>
+
+</html>
